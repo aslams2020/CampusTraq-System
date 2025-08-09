@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { auth } from "./firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { motion } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react"
 import Dashboard from "./Dashboard";
 import LoginRegister from "./LoginRegister";
 import VotingPage from "./pages/VotingPage";
@@ -102,7 +103,7 @@ function App() {
         <Route path="/student-list" element={<StudentList />} />
         <Route path="/report-sick" element={user ? <ReportSick /> : <Navigate to="/login" />} />
         <Route path="/report-leave" element={user ? <ReportLeave /> : <Navigate to="/login" />} />
-
+        <Analytics />
       </Routes>
 
       <footer className="footer">
