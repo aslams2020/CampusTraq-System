@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# CampusTraq – Transparent College Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CampusTraq is a **full-stack web application** designed to digitize and unify core college processes into a single transparent platform.  
+Built during a **36-hour national hackathon**, the system streamlines workflows, enhances accountability, and eliminates paper-based inefficiencies.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- **Role-Based Access Control** – Secure login with Firebase Google Authentication for students, faculty, and admins.
+- **Student Election System** – Encrypted vote storage, real-time result display, and admin-controlled candidate management.
+- **Facility Booking** – Request and approve classrooms, labs, and auditoriums with live availability tracking.
+- **Budget Management** – Transparent fund allocation and expense tracking for student bodies.
+- **Complaint Management** – Submit, track, and resolve grievances with full visibility.
+- **Notice Board** – Centralized announcements for all users.
+- **Lost & Found** – Report and track lost items within campus.
+- **Event Management** – Create, manage, and RSVP to campus events.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tech Stack
 
-### `npm test`
+**Frontend:** React.js, JavaScript (ES6+), HTML5, CSS3  
+**Backend:** Node.js, Express.js  
+**Database:** MongoDB, Mongoose  
+**Authentication:** Firebase Google Authentication  
+**Tools:** Git, GitHub, Postman
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🏗 Project Architecture
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Flow Overview:**
+1. **Frontend (React.js)** sends requests to the backend via RESTful APIs.
+2. **Backend (Node.js + Express)** processes requests, enforces role-based access, and interacts with MongoDB.
+3. **Firebase Authentication** validates users and assigns roles (Student / Faculty / Admin).
+4. **MongoDB Database** stores structured data for each module (Elections, Complaints, Bookings, etc.).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📡 API Endpoints
 
-### `npm run eject`
+### Authentication
+- **POST** `/auth/login` – Authenticate user via Firebase token.
+- **GET** `/auth/user` – Fetch current user profile & role.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Elections
+- **POST** `/elections/create` – Create a new election (Admin).
+- **POST** `/elections/vote` – Submit a vote (Student).
+- **GET** `/elections/results/:id` – Get real-time results for an election.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Facility Booking
+- **POST** `/facilities/book` – Book a facility (Student/Faculty).
+- **GET** `/facilities/status` – View availability.
+- **PATCH** `/facilities/approve/:id` – Approve or reject booking (Admin).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Complaints
+- **POST** `/complaints/create` – Submit a complaint.
+- **GET** `/complaints` – View all complaints (Admin).
+- **PATCH** `/complaints/resolve/:id` – Mark as resolved.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Budget
+- **POST** `/budget/allocate` – Allocate funds (Admin).
+- **GET** `/budget/track` – Track fund usage.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
