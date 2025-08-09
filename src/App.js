@@ -66,7 +66,7 @@ function App() {
   return (
     <div className="container">
       <nav className="navbar">
-        <h1 className="logo">Automated Paperless Transparent College System</h1>
+        <h1 className="logo">CampusTraq - Automated Paperless Transparent College System</h1>
         <div className="nav-links">
           <button onClick={() => (window.location.href = "/")}>Home</button>
           <button>About Us</button>
