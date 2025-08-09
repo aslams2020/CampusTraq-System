@@ -1,0 +1,93 @@
+/* General styles */
+.styled-faculty-dashboard {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #4e75bf, #3b51e0);
+  min-height: 100vh;
+  color: white;
+}
+
+/* Grid layout for applications */
+.styled-application-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Styling for individual application cards */
+.styled-application-card {
+  width: 30%;
+  background: rgb(4, 67, 143);
+  color: rgb(247, 244, 244);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.styled-application-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Text formatting */
+.styled-application-card p {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.styled-application-card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.styled-application-card a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons styling */
+.styled-button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.styled-button-group button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.styled-approve {
+  background-color: #28a745;
+}
+
+.styled-reject {
+  background-color: #dc3545;
+}
+
+.styled-button-group button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .styled-application-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .styled-application-card {
+    width: 90%;
+  }
+}

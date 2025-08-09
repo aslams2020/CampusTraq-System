@@ -1,0 +1,128 @@
+/* General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #007b8f, #00c6c3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Complaint List Container */
+.complaint-list-container {
+  width: 90%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.complaint-title {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Board Member Checkbox */
+.board-member-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.board-member-checkbox input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Complaint List Grid */
+.complaint-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Complaint Card */
+.complaint-card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.complaint-card:hover {
+  transform: scale(1.02);
+}
+
+.complaint-card p {
+  margin: 5px 0;
+}
+
+/* Delete Button */
+.delete-btn {
+  display: block;
+  width: 100%;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #cc0000;
+}
+
+/* No Complaints Message */
+.no-complaints {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .complaint-list-container {
+    width: 95%;
+    padding: 20px;
+  }
+  .complaint-card {
+    padding: 12px;
+  }
+  .complaint-title {
+    font-size: 20px;
+  }
+  .no-complaints {
+    font-size: 16px;
+  }
+}

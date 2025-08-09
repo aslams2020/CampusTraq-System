@@ -1,0 +1,159 @@
+/* General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #007b8f, #00c6c3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Complaint Form Container */
+.complaint-form-container {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Form Heading */
+.complaint-form h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.complaint-form input,
+.complaint-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  font-size: 16px;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+/* Placeholder Text */
+.complaint-form input::placeholder,
+.complaint-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Input Focus Effect */
+.complaint-form input:focus,
+.complaint-form textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Textarea Specific Styling */
+.complaint-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.checkbox-container input {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.checkbox-container label {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* Submit Button */
+.complaint-form button {
+  width: 100%;
+  padding: 12px;
+  background: #007b8f;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.complaint-form button:hover {
+  background: #005f6b;
+  transform: scale(1.05);
+}
+
+/* Success & Error Messages */
+.message {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Link to View Complaints */
+.link {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .complaint-form-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .complaint-form h2 {
+    font-size: 20px;
+  }
+
+  .complaint-form input,
+  .complaint-form textarea {
+    font-size: 14px;
+  }
+
+  .complaint-form button {
+    font-size: 16px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+}
